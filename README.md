@@ -16,15 +16,13 @@ Esta aplicación permite visualizar la **latitud** y la **altura** del dispositi
 
 ## Colaboradores
 
-_A continuación, se muestran los colaboradores del proyecto junto con sus perfiles de GitHub:_
-
 - [Erick Caiza](https://github.com/ericksebastian2003)
 - [Yuverly Verdezoto](https://github.com/YuverlyHidokun)  
-- [Mateo Garzon](https://github.com/usuario3)
-- [Luis Guaygua](https://github.com/usuario3) 
-- [Eduardo Caza](https://github.com/usuario3) 
-- [Erick Villaroal](https://github.com/usuario3) 
-- [Francisco Caero](https://github.com/usuario3) 
+- [Mateo Garzon](https://github.com/WesitosFsa)
+- [Luis Guaygua](https://github.com/Kr-luis) 
+- [Eduardo Caza](https://github.com/Eduardo-Caza) 
+- [Erick Villaroel](https://github.com/ErickVillarroel1722) 
+- [Francisco Caero](https://github.com/franciscocaero) 
 
 ---
 ## Capturas de Pantalla
