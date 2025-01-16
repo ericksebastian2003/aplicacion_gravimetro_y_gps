@@ -1,63 +1,35 @@
 package com.ericksebas03.app_localizacion
-import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+
+import android.content.Intent
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
+import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity(),SensorEventListener {
-
-    private lateinit var sensorManager:SensorManager
-    private var gravitySensor: Sensor?=null
-
-    private lateinit var tvX: TextView
-    private lateinit var tvY: TextView
-    private lateinit var tvZ: TextView
-
+class MainActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        tvX=findViewById(R.id.tv_x)
-        tvY=findViewById(R.id.tv_y)
-        tvZ=findViewById(R.id.tv_z)
 
-        sensorManager=getSystemService(SENSOR_SERVICE) as SensorManager
+        val btnGravimetro: Button = findViewById(R.id.btn_gravimetro)
+        val btnGps: Button = findViewById(R.id.btn_gps)
 
-        gravitySensor=sensorManager.getDefaultSensor(Sensor.TYPE_GRAVITY)
-        if(gravitySensor==null){
-            tvX.text="Sensor de gravedad no disponible"
+        // Configurar eventos onClick para los botones
+        btnGravimetro.setOnClickListener {
+            // Abrir la actividad del gravímetro
+            val intent = Intent(this, com.ericksebas03.app_localizacion.Gravimetro::class.java)
+            startActivity(intent)
         }
-    }
-    override fun onResume(){
-        super.onResume()
-        gravitySensor?.let {
-            sensorManager.registerListener(this,it,SensorManager.SENSOR_DELAY_NORMAL)
+
+        btnGps.setOnClickListener {
+            // Abrir la actividad del GPS
+            val intent = Intent(this, com.ericksebas03.app_localizacion.GPS::class.java)
+            startActivity(intent)
         }
-    }
-    override fun onPause(){
-        super.onPause()
-        sensorManager.unregisterListener(this)
-    }
-
-    override fun onSensorChanged(event: SensorEvent?) {
-        if (event?.sensor?.type==Sensor.TYPE_GRAVITY){
-            val x=event.values[0]
-            val y=event.values[1]
-            val z=event.values[2]
-
-            tvX.text="X: $x"
-            tvY.text="Y: $y"
-            tvZ.text="Z: $z"
-        }
-    }
-
-    override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
-        //
     }
 }

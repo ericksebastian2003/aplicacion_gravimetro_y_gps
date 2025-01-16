@@ -2,47 +2,52 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp">
+    android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/tv_gravity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Gravedad:"
-            android:textSize="18sp"
-            android:layout_marginBottom="8dp" />
+    <!-- Botón para acceder al GPS -->
 
-        <TextView
-            android:id="@+id/tv_x"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="X: 0.0"
-            android:textSize="16sp"
-            android:layout_marginBottom="4dp" />
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pantalla Principal"
+        app:layout_constraintBottom_toTopOf="@+id/btn_gravimetro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#435A94"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
 
-        <TextView
-            android:id="@+id/tv_y"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Y: 0.0"
-            android:textSize="16sp"
-            android:layout_marginBottom="4dp" />
+    <Button
+        android:id="@+id/btn_gravimetro"
+        android:layout_width="298dp"
+        android:layout_height="219dp"
+        android:layout_marginTop="124dp"
+        android:backgroundTint="#03A9F4"
+        android:text="GRAVIMETRO"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_z"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Z: 0.0"
-            android:textSize="16sp" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/btn_gps"
+        android:layout_width="295dp"
+        android:layout_height="209dp"
+        android:backgroundTint="#4CAF50"
+        android:text="GPS"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_gravimetro"
+        app:layout_constraintVertical_bias="0.324" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
