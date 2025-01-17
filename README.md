@@ -29,10 +29,12 @@ Esta aplicación permite visualizar la **latitud** y la **altura** del dispositi
 
 
 1. **Pantalla principal con datos de ubicación**  
-   ![Captura 1](ruta/a/tu/captura1.png)
+![image](https://github.com/user-attachments/assets/48c7c236-e929-4c79-8ded-fccd6d6c6cf3)
+
 
 2. **Pantalla de información sobre los autores**  
-   ![Captura 2](ruta/a/tu/captura2.png)
+![image](https://github.com/user-attachments/assets/bb4b27a8-d9ac-4f9a-b970-27cf0124a2d7)
+
 
 ---
 
